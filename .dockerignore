@@ -1,0 +1,10 @@
+# Git-Verzeichnis ignorieren
+.git
+.gitignore
+
+# Node-Abhängigkeiten ignorieren (werden im Container installiert)
+node_modules
+
+# Docker-Dateien selbst ignorieren
+Dockerfile
+docker-compose.yml
