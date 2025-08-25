@@ -1,0 +1,18 @@
+# docker-compose.yml
+
+# Definiert die Services (Container), aus denen unsere Anwendung besteht.
+services:
+  # Der erste Service: unsere Node.js-App
+  app:
+    # Anweisung: Baue das Image aus dem Dockerfile im aktuellen Ordner (.).
+    build: .
+    # Port-Weiterleitung: Verbinde Port 8080 unseres Computers (links)
+    # mit Port 8080 im Container (rechts).
+    ports:
+      - "8080:8080"
+
+  # Der zweite Service: die Redis-Datenbank
+  redis:
+    # Anweisung: Nutze ein fertiges Image von Docker Hub.
+    # 'alpine' ist eine besonders kleine Version.
+    image: "redis:alpine"
